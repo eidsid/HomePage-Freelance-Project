@@ -1,0 +1,100 @@
+.section3 {
+    background-color: $darkblue;
+    padding: 1rem;
+    h1,
+    h2,
+    h5,
+    .apps p,
+    summary {
+        color: white;
+    }
+    h1 {
+        +p {
+            color: white;
+            margin: 1rem 0 0 10vw;
+        }
+    }
+    .cards {
+        @include flex(row, center, center, 1rem);
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        .card {
+            width: 300px;
+            min-height: 120px;
+            background-color: rgb(0, 158, 179);
+            position: relative;
+            padding: 2rem 1rem 0 1rem;
+            .circel {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.7);
+                width: 80px;
+                height: 80px;
+                @include flex(row, center, center);
+                font-weight: 900;
+                line-height: 100px;
+                letter-spacing: 1px;
+                border-radius: 50%;
+                background-color: $bg-color4;
+                .progressCircel {
+                    @include flex(row, center, center);
+                    width: 65px;
+                    height: 65px;
+                    border-radius: inherit;
+                    background-color: inherit;
+                    border-right: 2px solid white;
+                    padding: 0.5rem;
+                    &.__2 {
+                        border-bottom: 2px solid white;
+                    }
+                    &.__3 {
+                        border: 2px solid white;
+                    }
+                }
+            }
+        }
+    }
+    h2 {
+        margin: 2rem 0 1rem 0;
+    }
+    details {
+        padding: 1rem;
+    }
+    .login {
+        margin-top: 1rem;
+        form {
+            margin-top: 0.5rem;
+            @include flex(row, center, center);
+            gap: 1rem;
+            overflow: hidden;
+            * {
+                height: 35px;
+                border: none;
+                border-radius: 4px;
+            }
+            input {
+                background-color: aliceblue;
+                min-width: 250px;
+                max-width: 500px;
+                padding: 5px 10px;
+            }
+            button {
+                background-color: white;
+                padding: 0 1rem;
+                &:hover {
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .apps {
+        margin-top: 1rem;
+        @include flex(row, space-evenly, center, 1rem);
+        flex-wrap: wrap;
+        img {
+            width: 100px;
+        }
+    }
+}

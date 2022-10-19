@@ -1,11 +1,23 @@
-let openVideobutton = document.getElementById("open_videobtn");
-let closeVideobutton = document.getElementById("close_videobtn");
+const openVideobutton = document.getElementById("open_videobtn");
+const closeVideobutton = document.getElementById("close_videobtn");
 const videoShow = document.getElementById("videoShow");
-console.log("welcome");
+
 [openVideobutton, closeVideobutton].forEach((el) => {
   el.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(videoShow);
+
     videoShow.classList.toggle("active");
   });
+});
+const ToTopButton = document.getElementById("to-top");
+
+ToTopButton.addEventListener("click", () => {
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+});
+window.addEventListener("scroll", (e) => {
+  if (document.documentElement.scrollTop > 500) {
+    ToTopButton.classList.add("active");
+  } else {
+    ToTopButton.classList.remove("active");
+  }
 });

@@ -12,12 +12,9 @@ a {
     color: white;
 }
 
-ul li {
-    list-style: none;
-}
-
+html,
 body {
     font-family: "Inter", sans-serif;
-    background-image: linear-gradient(to right, $bg-color3, $bg-color4);
     color: $mainColor;
+    scroll-behavior: smooth;
 }

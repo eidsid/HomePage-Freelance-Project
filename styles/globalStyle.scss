@@ -23,14 +23,8 @@ $mainBGColor: #efefef;
     transition: all ease-in-out $time;
 }
 
-@mixin SmollMobiles() {
-    @media (max-width: 576px) {
-        @content;
-    }
-}
-
 @mixin mobiles {
-    @media (min-width: 577px) and (max-width: 768px) {
+    @media (max-width: 768px) {
         @content;
     }
 }
@@ -42,13 +36,7 @@ $mainBGColor: #efefef;
 }
 
 @mixin desctops {
-    @media (min-width: 993px) and (max-width: 1200px) {
-        @content;
-    }
-}
-
-@mixin largdesctops {
-    @media (min-width: 1200px) {
+    @media (min-width: 993px) and(max-width: 1400px) {
         @content;
     }
 }
